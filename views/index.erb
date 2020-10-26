@@ -1,0 +1,17 @@
+<h1>List of recipes</h1>
+
+<table>
+  <% @recipes.each_with_index do |recipe, index| %>
+    <tr>
+      <td class='recipe_desc'>
+        <b><%= recipe.name %></b> <%= "--- Already done ---" if recipe.done? %><br>
+        <%= recipe.description %><br>
+        <b>Prep time:</b> <%= recipe.prep_time %> - <b>Rate:</b> <%= recipe.rating %>/5
+      </td>
+      <td class='recipe_action'><a href="/done/<%= index %>">Done</a></td></td>
+      <td class='recipe_action'><a href="/delete/<%= index %>">Delete</a></td></td>
+    </tr>
+  <% end %>
+</table>
+
+<a href="/new">Add a new recipe</a>

@@ -1,0 +1,16 @@
+h1 {
+  color:red;
+}
+
+tr {
+  border: 1px solid black;
+}
+
+.recipe_desc {
+  width: 300px;
+  padding-left: 10px;
+}
+
+.recipe_action {
+  width: 70px;
+}
